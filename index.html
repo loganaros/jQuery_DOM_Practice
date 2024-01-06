@@ -74,7 +74,20 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-  // Add your code here!
+  $(document).ready(function() {
+    console.log("Let's get ready to party with jQuery!");
+  });
+  $("img", "article").addClass("image-center");
+  $("p", "article").last().remove();
+  $("#title").css("font-size", Math.random() * 100);
+  $("ol").append("<li>HEY THERE!</li>");
+  $("aside").empty().append("<p>I'm sorry that that list ever existed.</p>");
+  $(".form-control").on("keyup blur change", function() {
+    $("body").css("background-color", `rgb(${$(".form-control").eq(0).val()}, ${$(".form-control").eq(1).val()}, ${$(".form-control").eq(2).val()})`);
+  });
+  $("img").on("click", function() {
+    $(this).remove();
+  })
 </script>
 </body>
 
